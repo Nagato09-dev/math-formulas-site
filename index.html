@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmulas Matemáticas Incríveis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FÓRMULAS MATEMÁTICAS INCRÍVEIS</h1>
+        <p><em>A beleza da matemática expressa em equações e lógica</em></p>
+    </header>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#coracao">Curva do Coração</a></li>
+            <li><a href="#pi">Fórmulas de Pi</a></li>
+            <li><a href="#primos">Números Primos</a></li>
+            <li><a href="#calculadora">Calculadora</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="coracao" class="fade-in">
+            <h2>CURVA DO CORAÇÃO</h2>
+            <div class="card">
+                <h3>Equação Implícita</h3>
+                <p class="formula">(x² + y² - 1)³ - x²y³ = 0</p>
+            </div>
+            <div class="card">
+                <h3>Equação Paramétrica</h3>
+                <p class="formula">x = 16sen³(t)</p>
+                <p class="formula">y = 13cos(t) - 5cos(2t) - 2cos(3t) - cos(4t)</p>
+            </div>
+            <div class="card">
+                <h3>Cardioide (Polar)</h3>
+                <p class="formula">r = 1 - sen(θ)</p>
+            </div>
+        </section>
+
+        <section id="pi" class="fade-in">
+            <h2>FÓRMULAS DE PI (π)</h2>
+            <div class="card">
+                <h3>Definição Geométrica</h3>
+                <p class="formula">π = C / d</p>
+            </div>
+            <div class="card">
+                <h3>Série de Leibniz</h3>
+                <p class="formula">π/4 = 1 - 1/3 + 1/5 - 1/7 + ...</p>
+            </div>
+            <div class="card">
+                <h3>Fórmula BBP</h3>
+                <p class="formula">Σ (1/16^k) * [4/(8k+1) - 2/(8k+4) - 1/(8k+5) - 1/(8k+6)]</p>
+            </div>
+            <div class="card">
+                <h3>Fórmula de Ramanujan</h3>
+                <p class="formula">1/π = (2√2/9801) * Σ [(4k)!(1103+26390k) / (k!^4 * 396^(4k))]</p>
+            </div>
+        </section>
+
+        <section id="primos" class="fade-in">
+            <h2>NÚMEROS PRIMOS</h2>
+            <div class="card">
+                <h3>Polinômio de Euler</h3>
+                <p class="formula">f(n) = n² + n + 41</p>
+            </div>
+            <div class="card">
+                <h3>Primos de Mersenne</h3>
+                <p class="formula">Mp = 2^p - 1</p>
+            </div>
+            <div class="card">
+                <h3>Fórmula de Willans</h3>
+                <p class="formula">A fórmula utiliza o Teorema de Wilson e funções piso para definir o n-ésimo primo de forma puramente analítica.</p>
+            </div>
+        </section>
+
+        <section id="calculadora" class="fade-in">
+            <h2>CALCULADORA DE PRIMOS</h2>
+            <div class="calculator-container">
+                <p>Encontre o n-ésimo número primo (Limite: 10.000)</p>
+                <div class="input-group">
+                    <input type="number" id="n-input" placeholder="Digite o valor de n" min="1" max="10000">
+                    <button onclick="calcularPrimo()">Calcular</button>
+                </div>
+                <div id="resultado" class="result-area">
+                    <!-- O resultado aparecerá aqui -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido com Elegância Matemática</p>
+        <p><a href="https://github.com/Nagato09-dev/math-formulas-site" target="_blank">Ver no GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

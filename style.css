@@ -1,0 +1,209 @@
+:root {
+    --bg-deep: #0a0a0a;
+    --bg-card: #1a1a1a;
+    --primary-gold: #d4af37;
+    --light-gold: #f9e27d;
+    --text-main: #ffffff;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: linear-gradient(to bottom, #1a1a1a, #0a0a0a);
+}
+
+header h1 {
+    color: var(--primary-gold);
+    font-size: 2.5rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    color: var(--light-gold);
+    font-size: 1.2rem;
+}
+
+#navbar {
+    position: sticky;
+    top: 0;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--primary-gold);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+#navbar ul li {
+    margin: 0 1.5rem;
+}
+
+#navbar ul li a {
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: color var(--transition-speed);
+}
+
+#navbar ul li a:hover {
+    color: var(--light-gold);
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+section h2 {
+    color: var(--primary-gold);
+    border-bottom: 2px solid var(--primary-gold);
+    display: inline-block;
+    margin-bottom: 2rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--primary-gold);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+}
+
+.card h3 {
+    color: var(--light-gold);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.formula {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    padding: 1rem;
+    border-radius: 4px;
+    color: #fff;
+    overflow-x: auto;
+}
+
+.calculator-container {
+    background-color: var(--bg-card);
+    border: 2px solid var(--primary-gold);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.input-group {
+    margin: 1.5rem 0;
+}
+
+input[type="number"] {
+    background: #000;
+    border: 1px solid var(--primary-gold);
+    color: #fff;
+    padding: 0.8rem;
+    font-family: 'Courier New', monospace;
+    width: 200px;
+    margin-right: 1rem;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    box-shadow: 0 0 10px var(--primary-gold);
+}
+
+button {
+    background-color: var(--primary-gold);
+    color: #000;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+button:hover {
+    background-color: var(--light-gold);
+}
+
+.result-area {
+    margin-top: 1.5rem;
+    min-height: 50px;
+    font-family: 'Courier New', monospace;
+    color: var(--light-gold);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    border-top: 1px solid var(--primary-gold);
+    margin-top: 4rem;
+}
+
+footer a {
+    color: var(--primary-gold);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 { font-size: 1.8rem; }
+    #navbar ul { flex-direction: column; align-items: center; }
+    #navbar ul li { margin: 0.5rem 0; }
+}
+
+@media (max-width: 480px) {
+    .input-group { display: flex; flex-direction: column; align-items: center; }
+    input[type="number"] { margin-right: 0; margin-bottom: 1rem; width: 100%; }
+    button { width: 100%; }
+}
